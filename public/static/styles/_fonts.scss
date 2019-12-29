@@ -1,5 +1,5 @@
-@import "_mixins";
+@import "_mixins/font-face";
 
-@include font-face("Muller", "../fonts/Fontfabric - MullerMedium");
-@include font-face("Muller", "../fonts/Fontfabric - MullerBold", 700);
-@include font-face("Muller", "../fonts/Fontfabric - MullerExtraBold", 800);
+@include font-face("Muller", "../fonts/MullerMedium");
+@include font-face("Muller", "../fonts/MullerBold", 700);
+@include font-face("Muller", "../fonts/MullerExtraBold", 800);
