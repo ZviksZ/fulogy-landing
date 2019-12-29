@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 18px 38px;
+    .navList {
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+        padding-left: 0;
+        margin-left: 50px;
+        li {
+            margin-right: 40px;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
