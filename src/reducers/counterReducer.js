@@ -1,3 +1,4 @@
+/*
 import { INCREMENT, DECREMENT, RESET } from "../actions/types";
 
 const initialState = { counter: 0 };
@@ -14,3 +15,4 @@ export default function(state = initialState, action) {
       return state;
   }
 }
+*/

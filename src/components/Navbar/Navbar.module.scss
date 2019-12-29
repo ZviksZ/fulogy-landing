@@ -8,13 +8,38 @@
         justify-content: flex-start;
         list-style: none;
         padding-left: 0;
-        margin-left: 50px;
+        margin-left: auto;
         li {
-            margin-right: 40px;
-            
+            margin-right: 40px;            
             a {
                 text-decoration: none;
+                color: #1a1a1a;
+                font-size: 16px;
+                &:visited {
+                    color: #1a1a1a;
+                }
             }
+        }
+    }
+    .contacts {
+        margin-left: 52px;
+        display: flex;
+        align-items: center;
+        span {
+            display: inline-block;
+            color: #9a9a9a;
+            font-size: 16px;
+            line-height: 16px;
+            cursor: pointer;
+            margin-right: 22px;
+        }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #5e50c2;
+            font-size: 20px;
+            font-weight: 800;
+            text-transform: uppercase;
         }
     }
 }
