@@ -1,38 +1,111 @@
 .topBanner {
     display: flex;
-    width: 50%;
-    padding: 55px 40px 0;
-    h1 {
-        color: #1a1a1a;
-        font-size: 36px;
-        font-weight: 800;
-        line-height: 48px;
-        text-transform: uppercase;  
-    }
-    .subtitle {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 30px;
-        color: #1a1a1a;
-        span {
-            color: #5e50c2;
+    justify-content: space-between;    
+    .topBannerLeft {
+        width: 40%;
+        padding: 55px 40px 0;
+        h1 {
+            color: #1a1a1a;
+            font-size: 36px;
             font-weight: 800;
+            line-height: 48px;
+            text-transform: uppercase;
+        }
+        .subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #1a1a1a;
+            span {
+                color: #5e50c2;
+                font-weight: 800;
+            }
+        }
+        .video {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #1a1a1a;
+            span {
+                display: inline-block;
+                color: #5e50c2;
+                font-weight: 700;
+            }
+            a {
+                display: inline-block;
+                border-radius: 50%;
+                background-color: #ffcf0d;
+            }
         }
     }
-    .video {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        color: #1a1a1a;
-        span {
-            color: #5e50c2;
-            font-weight: 700;
+    .topBannerRight {
+        position: relative;
+        width: 60%;
+        overflow-x: hidden;
+        .topBannerRightBg {
+            width: 80%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                margin-top: -70px;
+            }
         }
-        a {
+        .changeColor {
+            background: #fff;
+            position: relative;
             display: inline-block;
-            border-radius: 50%;
-            background-color: #ffcf0d;
+            margin-top: 85px;
+            margin-left: 150px;
+            padding-left: 100px;
+            padding-right: 24px;
+            border-radius: 0 100px 100px 0;
+            span {
+                position: absolute;
+                width: 50%;
+                top: -40px;
+                right: 0;
+                color: #7c7c7c;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 16px;
+                text-align: center;
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                li {
+                    border-radius: 50%;
+                    width: 11px;
+                    height: 11px;
+                    border: 1px solid transparent;
+                    cursor: pointer;
+                    margin-right: 19px;
+                    font-size: 1px;
+                    color: transparent;
+                }
+                li:nth-child(1) {background-color: #d9c79c}
+                li:nth-child(2) {background-color: #ffffff; border: 1px solid #e3e3e3;}
+                li:nth-child(3) {background-color: #595959}
+                li:nth-child(4) {background-color: #c9c9c9}
+                li:last-child { margin-right: 0;}
+            }
+        }
+        .colorImg {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            right: -300px;
+            overflow: hidden;
+            img {
+                width: 90%;
+            }
         }
     }
+    
 }
 
