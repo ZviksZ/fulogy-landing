@@ -15,4 +15,8 @@
     &:hover {
         background-color: #ffe013;
     }
+    &:disabled {
+        background-color: #d8d8d8;
+        color: white;
+    }
 }

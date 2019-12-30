@@ -1,27 +1,24 @@
-const INITIALIZED_SUCCESS = 'fulogy/common/INITIALIZED_SUCCESS';
+const SET_POPUP_MODE = 'fulogy/common/SET_POPUP_MODE';
 
 let initialState = {
-   
+   popupMode: false,
+   popupType: 'form'
 };
 
 export const commonReducer = (state = initialState, action) => {
    switch (action.type) {
-      case INITIALIZED_SUCCESS:
+      case SET_POPUP_MODE:
          return {
             ...state,
-            initialized: true
+            popupMode: action.mode,
+            popupType: action.popupType
          }      
       default:
          return state;
    }
 }
 
-export const initializedSuccess = () => ({type: INITIALIZED_SUCCESS})
+export const setPopupMode = (mode, popupType) => ({type: SET_POPUP_MODE, mode, popupType})
 
-export const initializeApp = () => (dispatch) => {
-   let promise = dispatch(setAuthUserDataThunk());
-   promise.then(() => {
-      dispatch(initializedSuccess());
-   })
-}
+
 

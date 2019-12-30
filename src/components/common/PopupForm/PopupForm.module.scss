@@ -1,0 +1,13 @@
+.popupFormContainer {
+    width: 50%;
+    height: 300px;
+    background: #ebebeb;
+    display: flex;
+    .popupFormImg {
+        width: 48%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

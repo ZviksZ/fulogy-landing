@@ -1,8 +1,14 @@
 import React          from 'react'
 import {ButtonYellow} from "../../common/ButtonYellow/ButtonYellow.jsx";
 import s              from '../TopBanner.module.scss'
+import playerImg   from '../../../../public/static/assets/img/player_bg.png'
+import playerSymbol   from '../../../../public/static/assets/img/media-play-symbol.svg'
 
-export const TopBannerLeft = () => {
+export const TopBannerLeft = ({setPopupMode}) => {
+   const handleClick = (e) => {
+      e.preventDefault()
+      setPopupMode(true, 'video')
+   }
    return (
       <div className={s.topBannerLeft}>
          <h1>
@@ -14,10 +20,16 @@ export const TopBannerLeft = () => {
             по цене производителя.
          </p>
          <div className={s.video}>
-            <span>Посмотрите </span>видеопрезентацию
-            о наших светильниках!
+            <p>
+               <span>Посмотрите</span> видеопрезентацию
+               о наших светильниках!
+            </p>
+            
            
-            <a href="/">Video</a>
+            <a href="/" onClick={handleClick}>
+               <img src={playerImg} alt="1"/>
+               <img src={playerSymbol} alt="2" className={s.videoSvg}/>
+            </a>
          </div>
          <ButtonYellow text={"Онлайн конструктор"} link={"/"}/>
       </div>

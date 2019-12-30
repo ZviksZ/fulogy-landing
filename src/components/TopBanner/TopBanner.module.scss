@@ -1,9 +1,12 @@
 .topBanner {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #fefefe;
     .topBannerLeft {
         width: 40%;
-        padding: 55px 40px 0;
+        padding: 55px 40px 77px;
+        box-sizing: border-box;
         h1 {
             color: #1a1a1a;
             font-size: 36px;
@@ -26,21 +29,51 @@
             font-weight: 400;
             line-height: 24px;
             color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            p {
+                width: 40%;
+                margin-right: 45px;
+                line-height: 24px;
+            }
             span {
                 display: inline-block;
                 color: #5e50c2;
                 font-weight: 700;
             }
             a {
-                display: inline-block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 border-radius: 50%;
                 background-color: #ffcf0d;
+                width: 54px;
+                height: 54px;  
+                transition: all 0.5s linear;
+                position: relative;
+                &:hover {
+                    background-color: #ffe013;
+                }
+                img {
+                    width: 34px;
+                    height: 34px;                    
+                }
+                .videoSvg {
+                    position: absolute;
+                    width: 11px;
+                    height: 14px;
+                    fill: #fff;
+                    left: 22px;
+                    top: 20px; 
+                }
             }
         }
     }
     .topBannerRight {
         position: relative;
         width: 60%;
+        box-sizing: border-box;
         .topBannerRightBg {
             width: 80%;
             position: absolute;
@@ -60,7 +93,7 @@
             display: inline-block;
             margin-top: 85px;
             margin-left: 150px;
-            padding-left: 100px;
+            padding-left: 150px;
             padding-right: 24px;
             border-radius: 0 100px 100px 0;
             span {
@@ -106,6 +139,85 @@
                 width: 90%;
                 transition: all 0.5s linear;
             }
+        }
+    }
+    .bottomBlock {
+        padding: 60px 40px 74px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        .bottomItem {
+            border: 1px solid #edf1f2;
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 98px;
+            position: relative;
+            p {
+                color: #1a1a1a;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+                text-transform: uppercase;
+                margin-left: 18px;
+                padding-right: 12px;
+                max-width: 60%;
+            }
+        }
+        .bottomItem:nth-child(1) {
+            img {
+                width: 33px;
+                height: 33px; 
+            }            
+        }
+        .bottomItem:nth-child(2) {
+            img {
+                width: 35px;
+                height: 33px; 
+            }            
+        }
+        .bottomItem:nth-child(3) {
+            img {
+                width: 37px;
+                height: 34px;
+                transform: rotate(-45deg);
+            }            
+        }
+        .bottomItem:nth-child(4) {
+            img {
+                width: 37px;
+                height: 34px;
+            }
+        }
+        .thirdItem {
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            left: -11px;
+            top: 3px;
+            width: 12px;
+            height: 12px;
+            opacity: 0.3;
+        }
+        .close:hover {
+            opacity: 1;
+        }
+        .close:before, .close:after {
+            position: absolute;
+            left: 15px;
+            content: ' ';
+            height: 13px;
+            width: 2px;
+            background-color: #ff4848;
+        }
+        .close:before {
+            transform: rotate(45deg);
+        }
+        .close:after {
+            transform: rotate(-45deg);
         }
     }
     
