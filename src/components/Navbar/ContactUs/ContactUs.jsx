@@ -11,7 +11,7 @@ const ContactUs = ({setPopupMode}) => {
    return (
       <div className={style.contacts}>
          <span onClick={changeMode}>Заказать звонок</span>
-         <a href="+78005056533">+7-(800)-505-65-33</a>
+         <a href="tel:+78005056533">+7-(800)-505-65-33</a>
       </div>
 
 
