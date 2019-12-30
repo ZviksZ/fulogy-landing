@@ -1,12 +1,14 @@
-import React         from "react";
-import Header        from "../src/components/common/Header.jsx";
-import {Navbar}      from "../src/components/Navbar/Navbar.jsx";
+import React       from "react";
+import Header      from "../src/components/common/Header.jsx";
+import {Navbar}    from "../src/components/Navbar/Navbar.jsx";
+import {TopBanner} from "../src/components/TopBanner/TopBanner.jsx";
 
 function index() {
   return (
     <div>
       <Header />  
       <Navbar/>
+      <TopBanner/>
     </div>
   );
 }

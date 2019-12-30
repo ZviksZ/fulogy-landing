@@ -1,0 +1,18 @@
+.btnYellow {
+    display: inline-block;
+    text-decoration: none;
+    width: 254px;
+    height: 55px;
+    background-color: #ffcf0d;
+    border-radius: 2px;
+    transition: all 0.5s linear;
+    line-height: 58px;
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:hover {
+        background-color: #ffe013;
+    }
+}
