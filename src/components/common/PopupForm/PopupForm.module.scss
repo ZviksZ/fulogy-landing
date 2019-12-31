@@ -1,8 +1,177 @@
 .popupFormContainer {
-    width: 50%;
-    height: 300px;
+    width: 45%;
     background: #ebebeb;
     display: flex;
+    .popupFromWrap {
+        width: 52%;
+        position: relative;
+        padding-top: 30px;
+        padding-bottom: 36px;
+        background: #fff;
+        .popupFormClose {
+            position: absolute;
+            right: 21px;
+            top: 11px;
+            width: 13px;
+            height: 13px;            
+            opacity: 1;
+            cursor: pointer;
+            transition: all 0.5s linear;
+        }
+        .popupFormClose:hover {
+            opacity: 0.3;
+        }
+        .popupFormClose:before, .popupFormClose:after {
+            position: absolute;
+            left: 15px;
+            content: ' ';
+            height: 15px;
+            width: 2px;
+            background-color: #969696;
+        }
+        .popupFormClose:before {
+            transform: rotate(45deg);
+        }
+        .popupFormClose:after {
+            transform: rotate(-45deg);
+        }
+        .popupFormTitle {
+            border-right: 6px solid #ffcf0d;
+            border-left: 6px solid #ffcf0d;
+            text-align: center;
+            margin-bottom: 30px;
+            h3 {
+                color: #1a1a1a;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 24px;
+                text-transform: uppercase; 
+            }
+            span {
+                color: #1a1a1a;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 18px;
+            }
+        }
+        form {
+            padding: 0 31px;
+            text-align: center;
+            box-sizing: border-box;            
+        }
+        .policyBlock {
+            text-align: left;
+            a {
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18px;
+                color: #6b5cd9;
+                text-decoration: underline;
+                margin-bottom: 18px;
+                padding-left: 1.95em;
+            }
+            .checkInput {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18px;
+                margin-bottom: 4px;
+                margin-top: 2px;
+                color: #1a1a1a;
+                [type="checkbox"]:not(:checked),
+                [type="checkbox"]:checked {
+                    position: absolute;
+                    left: -9999px;
+                }
+                [type="checkbox"]:not(:checked) + label,
+                [type="checkbox"]:checked + label {
+                    position: relative;
+                    padding-left: 1.95em;
+                    cursor: pointer;
+                }
+                [type="checkbox"]:not(:checked) + label:before,
+                [type="checkbox"]:checked + label:before,
+                [type="checkbox"]:not(:checked):focus + label:before {
+                    content: '';
+                    position: absolute;
+                    left: 0; top: 0;
+                    width: 12px; 
+                    height: 12px;
+                    border-radius: 50%;
+                    border: 2px solid #d6d5da;
+                    background: #fff;
+                    transition: all .2s;
+                    box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+                }
+                [type="checkbox"]:not(:checked) + label:after,
+                [type="checkbox"]:checked + label:after,
+                [type="checkbox"]:not(:checked):focus + label:after {
+                    content: '';
+                    position: absolute;
+                    top: 5px; left: 5px;
+                    width: 6px;
+                    height: 6px;
+                    background-color: #d6d5da;
+                    transition: all .2s;
+                    border-radius: 50%;
+                }
+                [type="checkbox"]:checked + label:after {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                [type="checkbox"]:checked + label:before{
+                    border: 2px solid #5e50c2!important;
+                }
+                [type="checkbox"]:checked + label:after{
+                    left: 0; top: 0;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    border: 2px solid #5e50c2;
+                    background-color: #5e50c2!important;
+                }
+                label:hover:before {
+                    border: 2px solid #5e50c2!important;
+                }
+                label:hover:after {
+                    background-color: #5e50c2!important;
+                }
+            }
+        }
+        .textInput {
+            width: 100%;
+            background-color: #f1f1f1;
+            padding: 16px 21px;
+            font-size: 14px;
+            font-weight: 400;
+            box-sizing: border-box;
+            border: 1px solid transparent;
+            outline: none;
+            transition: all 0.5s linear;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            &:focus {
+               border: 1px solid #6bae22;
+               outline: none;
+            }
+            &.errorMsg {
+                border: 1px solid #f42d28;
+                outline: none;
+            }
+        }
+        .textInput::-webkit-input-placeholder { color: #adadad; }
+        .textInput:-ms-input-placeholder { color: #adadad; }
+        .textInput::-ms-input-placeholder { color: #adadad; }
+        .textInput::placeholder { color: #adadad; }
+        .wrap {
+            position: relative;
+        }
+        .errorMessage {
+            position: absolute;
+            bottom: -15px;
+            color: #f42d28;
+        }
+    }
     .popupFormImg {
         width: 48%;
         img {

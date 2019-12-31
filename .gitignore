@@ -3,4 +3,7 @@
 /.idea
 /.git
 /.next
-
+/out
+/.firebase
+.firebaserc
+firebase.json

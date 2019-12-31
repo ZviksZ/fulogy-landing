@@ -4,6 +4,8 @@
     align-items: center;
     padding: 18px 38px;
     z-index: 5;
+    box-sizing: border-box;
+    min-height: 87px;
     .navList {
         display: flex;
         justify-content: flex-start;
@@ -16,6 +18,12 @@
                 text-decoration: none;
                 color: #1a1a1a;
                 font-size: 16px;
+                transition: all 0.3s linear;
+                box-sizing: border-box;
+                &:hover {
+                    color: #5e50c2 !important;
+                    font-size: 18px;
+                }
                 &:visited {
                     color: #1a1a1a;
                 }
@@ -33,6 +41,10 @@
             line-height: 16px;
             cursor: pointer;
             margin-right: 22px;
+            transition: all 0.3s linear;
+            &:hover {
+               color: #5e50c2; 
+            }
         }
         a {
             display: inline-block;
